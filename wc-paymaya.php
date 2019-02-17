@@ -3,7 +3,7 @@
  * Plugin Name: Woo PayMaya Payment Gateway
  * Description: WooCommerce PayMaya Payment Vault - Tokenization & Card Vault Gateway Extension.
  * Plugin URI: https://www.ryanplugins.com/
- * Version: 1.2
+ * Version: 1.3
  * Author: Ryan IT Solutions
  * Author URI: https://www.ryanplugins.com/
  *

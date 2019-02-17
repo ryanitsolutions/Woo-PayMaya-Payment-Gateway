@@ -3,7 +3,7 @@ Contributors: ryanitsolutions
 Tags: woocommerce, credit card, payment gateway, payment tokenization, paymaya
 Requires at least: 4.4
 Tested up to: 5.0.3
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
