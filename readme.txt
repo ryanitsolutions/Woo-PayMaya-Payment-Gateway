@@ -1,10 +1,9 @@
 === Woo PayMaya Payment Gateway ===
 Contributors: ryanitsolutions
-Donate link: https://goo.gl/ECpQHg
 Tags: woocommerce, credit card, payment gateway, payment tokenization, paymaya
 Requires at least: 4.4
-Tested up to: 4.8.1
-Stable tag: 1.1
+Tested up to: 5.0.3
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,15 +25,15 @@ Test this PayMaya woocommerce plugin by creating transactions using test cards a
 = Promotion to Production =
 Once you have fully tested this PayMaya woocommerce plugin, you can [contact PayMaya](http://support.paymaya.com/support/home) for assistance on your production deployment. Your integration will undergo a certification process. Once certified, you will be given a new set of API keys provisioned in production which you can use to process live payments.
 
-= Needs Your Support =
-
-It is hard to continue development and support for this free plugin without contributions from users like you. If you enjoy using Woo PayMaya Payment Gateway and find it useful, please consider [__making a donation__](https://goo.gl/ECpQHg). Your donation will help encourage and support the plugin's continued development and better user support.
 
 = Minimum Requirements =
 
 *   WooCommerce 2.6+
+*   WooCommerce 3.5+
 *   WordPress 4.4+
+*   WordPress 5.0+
 *   PHP 5+
+*   PHP 7+
 
 == Installation ==
 
@@ -43,7 +42,7 @@ It is hard to continue development and support for this free plugin without cont
 
 You will find 'PayMaya' menu in your WordPress admin panel > Woocommerce Menu > Settings > Checkout .
 
-For video and step by step plugin installation tutorial, visit the [plugin web site](https://ryanitsolutions.wordpress.com/2017/08/15/paymaya-installation/).
+For video and step by step plugin installation tutorial, visit the [plugin web site](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway).
 
 
 == Screenshots ==
@@ -56,15 +55,21 @@ For video and step by step plugin installation tutorial, visit the [plugin web s
 
 == Changelog ==
 
-For more information, see [Releases](https://ryanitsolutions.wordpress.com/2017/08/15/paymaya-releases/).
-
 = 1.0 =
 * Initial release version
 
 = 1.1 =
 * UPDATE: Source code update, clean unnecessary code.
 
+= 1.2 =
+* UPDATE: add new status FOR_AUTHENTICATION checkout process
+* UPDATE: add metadata description
+
 == Upgrade Notice ==
 
 = 1.0  =
 * Initial Public Release
+
+= 1.2 =
+* UPDATE: add new status FOR_AUTHENTICATION checkout process
+* UPDATE: add metadata description

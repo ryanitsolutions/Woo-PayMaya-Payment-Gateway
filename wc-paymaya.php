@@ -1,11 +1,16 @@
 <?php
 /*
-Plugin Name: Woo PayMaya Payment Gateway
-Description: WooCommerce PayMaya Payment Vault - Tokenization & Card Vault Gateway Extension.
-Version: 1.1
-Author: Ryan IT Solutions
-Author URI: https://ryanitsolutions.wordpress.com/
-*/
+ * Plugin Name: Woo PayMaya Payment Gateway
+ * Description: WooCommerce PayMaya Payment Vault - Tokenization & Card Vault Gateway Extension.
+ * Plugin URI: https://www.ryanplugins.com/
+ * Version: 1.2
+ * Author: Ryan IT Solutions
+ * Author URI: https://www.ryanplugins.com/
+ *
+ * WC requires at least: 2.2
+ * WC tested up to: 3.5
+ *
+ */
 
 add_action( 'plugins_loaded', 'wc_paymaya_init', 0 );
 

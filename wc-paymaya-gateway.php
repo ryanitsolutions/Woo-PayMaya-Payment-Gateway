@@ -116,6 +116,9 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
    */
 
   public function pf(){
+
+     $current_user = wp_get_current_user();
+
     if( $this->pf_enabled  === true ){
       return array(
         'pf' => array(
@@ -125,11 +128,14 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
             'mpc' => $this->pf_mpc,
             'mco' => $this->pf_mco, 
             'mst' => $this->pf_mst
-            )
+            ),
+        'description' => 'Charge for ' . $current_user->user_email
         );
 
     } else {
-       return array();   
+      return array(
+        'description' => 'Charge for ' . $current_user->user_email
+        ); 
     }
    
   }
@@ -706,6 +712,8 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
                         'user-agent'    => 'WooCommerce ' . $woocommerce->version
                     ) );
 
+    //echo "<pre>"; print_r($response); echo "</pre>";
+
      if ( is_wp_error( $response ) ) {
 
         $error_message = $response->get_error_message();
@@ -894,6 +902,7 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
       'requestReferenceNumber' =>  $order->get_order_number(),
         
     );
+    
 
     if( ! empty($pm_customer_id)){
 
@@ -917,6 +926,7 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
       // do paymaya payments
       $pay_response = $this->pm_request( $pm_params , '/payments/v1/payments', 'POST' );
     }
+     
     
     $state = ! empty($pay_response->state) ? $pay_response->state : '';
     $status = ! empty($pay_response->status) ? $pay_response->status: '';
@@ -1052,6 +1062,17 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
               break;
             case 'REFUNDED':
               break;
+
+            case 'FOR_AUTHENTICATION':
+
+            $verificationUrl = $pay_response->verificationUrl;
+
+             return array(
+                  'result' => 'success',
+                  'redirect' => $verificationUrl
+                );
+
+                break;  
                 
             default:
 
@@ -1384,11 +1405,10 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
 
       $request = ! empty( $_REQUEST ) ? $_REQUEST : false;
 
+      $order_id = wc_clean( $request[ 'order_id' ]);
+      $order      = new WC_Order( $order_id );
+
       if( $request[ 'response' ] == 'success' && ! empty($request[ 'order_id' ])){
-
-        $order_id = wc_clean( $request[ 'order_id' ]);
-
-        $order      = new WC_Order( $order_id );
 
         $order_status = $this->virtual_order_payment_complete_order_status( $order_id );
 

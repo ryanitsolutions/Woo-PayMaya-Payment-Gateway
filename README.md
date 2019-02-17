@@ -13,8 +13,11 @@ Once you have fully tested this PayMaya woocommerce plugin, you can [contact Pay
 ## Minimum Requirements 
 
 *   WooCommerce 2.6+
+*   WooCommerce 3.5+
 *   WordPress 4.4+
+*   WordPress 5.0+
 *   PHP 5+
+*   PHP 7+
 
 ## Installation 
 
@@ -23,6 +26,6 @@ Once you have fully tested this PayMaya woocommerce plugin, you can [contact Pay
 
 You will find 'PayMaya' menu in your WordPress admin panel > Woocommerce Menu > Settings > Checkout .
 
-For video and step by step plugin installation tutorial, visit the [plugin web site](https://ryanitsolutions.wordpress.com/2017/08/15/paymaya-installation/).
+For video and step by step plugin installation tutorial, visit the [plugin web site](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway).
 
 
