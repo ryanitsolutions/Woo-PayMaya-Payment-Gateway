@@ -103,7 +103,36 @@
         }
 
       } else {
-         $paymaya_form.submit();
+         // add new tokens
+         if( $("#wc-rits_paymaya-payment-token-new").is( ':checked' ) === true ){
+
+            var $req = {
+                'action' : 'pm-ajax-request',
+                'method' : 'WC_Paymaya_Gateway',
+                'func'   : 'create_token',
+                'data'   : $paymentForm
+            }
+
+            $( "form#place_order").prop( "disabled" , true );
+
+            jQuery.post( pm_ajax_service.ajax_url, $req, function(response) {
+                 $( "form#place_order").prop( "disabled" , false );
+                 if( response.success === true ){
+
+                    $( "#wc-rits_paymaya-cc-form" ).append( '<input type="hidden" class="rits_paymaya-cc-expiry-year" name="rits_paymaya-cc-expiry-year" value="' + data.card_expiry_year + '"/>' );
+                    $( "#wc-rits_paymaya-cc-form" ).append( '<input type="hidden" class="rits_paymaya-cc-expiry-month" name="rits_paymaya-cc-expiry-month" value="' + data.card_expiry_month + '"/>' );
+
+                    payMayaHandleSuccess(response.data.token);
+
+                 } else {
+                    payMayaHandleError(response.response_message, response.data.parameters);
+                 }
+                return false;
+            });
+
+         } else {
+          $paymaya_form.submit();
+         }
       } 
 
     return true;
