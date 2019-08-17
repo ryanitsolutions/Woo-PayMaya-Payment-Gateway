@@ -49,7 +49,9 @@ For video and step by step plugin installation tutorial, visit the [plugin web s
 = 1.3 =
 * UPDATE: readme.txt
 
-= 1.4 =
+= 1.4.1 =
+* FIXED: JS Token Bugs
+* FIXED: create live keys token 
 * UPDATE: readme.txt
 
 
