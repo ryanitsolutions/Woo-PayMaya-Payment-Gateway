@@ -23,7 +23,8 @@ Currently, supported currency is Philippine Peso (PHP).
 * [Watch Demo PayMaya WooCommerce Demo Checkout](https://www.ryanplugins.com/woocommerce-paymaya-checkout-video-tutorial/)
 
 = GitHub =
-* [WooCommerce PayMaya Payment Gateway Source Code](https://github.com/ryanplugins/woo-paymaya-payment-gateway)
+* [WooCommerce PayMaya Payment Gateway Plugin Source Code](https://github.com/ryanplugins/woo-paymaya-payment-gateway)
+* [WooCommerce PayMaya Payment Gateway Plugin Git Releases](https://github.com/ryanplugins/woo-paymaya-payment-gateway/releases)
 
 = Testing =
 Test this PayMaya woocommerce plugin by creating transactions using test cards and API keys available [here](https://developers.paymaya.com/blog/entry/payment-vault-test-merchants-and-cards). You can also [contact PayMaya](http://support.paymaya.com/support/home) and request for your own set of API keys.
