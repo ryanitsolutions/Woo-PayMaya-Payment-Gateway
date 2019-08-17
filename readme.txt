@@ -17,6 +17,15 @@ This extension allows you to accept Credit Cards Payments and Pay via Saved Card
 = Supported Currency =
 Currently, supported currency is Philippine Peso (PHP).
 
+= Features =
+* Secure, Fast and Reliable Checkout Process.
+* Payment Tokenization
+* 3D Secure Supported
+* Refund
+
+= Demo Payment Checkout =
+* [est plugin demo checkou](https://paymaya.kodecanyon.com/)
+
 = Online Docs =
 * [How to Setup WooCommerce PayMaya Payment Gateway](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway-plugin/)
 * [Watch demo how to set up WooCommerce PayMaya Payment Gateway Plugin](https://www.ryanplugins.com/woocommerce-paymaya-gateway-plugin-video-tutorial/)
@@ -68,7 +77,9 @@ Once you have fully tested this PayMaya woocommerce plugin, you can [contact Pay
 = 1.3 =
 * UPDATE: readme.txt
 
-= 1.4 =
+= 1.4.1 =
+* FIXED: JS Token Bugs
+* FIXED: create live keys token 
 * UPDATE: readme.txt
 
 == Upgrade Notice ==
@@ -83,6 +94,8 @@ Once you have fully tested this PayMaya woocommerce plugin, you can [contact Pay
 = 1.3 =
 * UPDATE: readme.txt
 
-= 1.4 =
+= 1.4.1 =
+* FIXED: JS Token Bugs
+* FIXED: create live keys token 
 * UPDATE: readme.txt
 

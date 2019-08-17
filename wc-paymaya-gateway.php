@@ -603,13 +603,13 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
 
             $return       = call_user_func_array( "$method::$func" , array( $data ) );
             $response_code    = ( $return[ 'code' ] == true ? true : false );
-            $response_message   = __( $return[ 'message' ] , 'cf7qc' );
+            $response_message   = __( $return[ 'message' ] , 'woocommerce' );
             $response_result  = ( ! empty( $return[ 'data' ] ) ? $return[ 'data' ] : '' );
 
         } else {
 
             $response_code    =  false;
-            $response_message   = __( 'Invalid method Name!', 'cf7qc' );
+            $response_message   = __( 'Invalid method Name!', 'woocommerce' );
             $response_result  = '';
         }
 
@@ -1142,7 +1142,8 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
 
   public function virtual_order_payment_complete_order_status( $order_id ){
         
-    $order = new WC_Order( $order_id );
+    //$order = new WC_Order( $order_id );
+    $order      = wc_get_order( $order_id );
 
     $virtual_order = null;
 
@@ -1415,7 +1416,8 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
       $request = ! empty( $_REQUEST ) ? $_REQUEST : false;
 
       $order_id = wc_clean( $request[ 'order_id' ]);
-      $order      = new WC_Order( $order_id );
+      //$order      = new WC_Order( $order_id );
+      $order      = wc_get_order( $order_id );
 
       if( $request[ 'response' ] == 'success' && ! empty($request[ 'order_id' ])){
 

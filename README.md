@@ -4,6 +4,9 @@ This extension allows you to accept payments in WooCommerce via PayMaya.
 ## Supported Currency 
 Currently, supported currency is Philippine Peso (PHP).
 
+## Demo Payment Checkout
+* [Test plugin demo checkout](https://paymaya.kodecanyon.com/)
+
 ## Online Docs 
 * [How to Setup WooCommerce PayMaya Payment Gateway](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway-plugin/)
 * [Watch demo how to set up WooCommerce PayMaya Payment Gateway Plugin](https://www.ryanplugins.com/woocommerce-paymaya-gateway-plugin-video-tutorial/)

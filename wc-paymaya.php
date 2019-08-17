@@ -7,8 +7,8 @@
  * Author: Ryan IT Solutions
  * Author URI: https://www.ryanplugins.com/
  *
- * WC requires at least: 2.2
- * WC tested up to: 3.5
+ * WC requires at least: 3.0
+ * WC tested up to: 3.7
  *
  */
 
