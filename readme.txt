@@ -11,7 +11,7 @@ This extension allows you to accept payments in WooCommerce via PayMaya.
 
 == Description ==
 
-WooCommerce PayMaya Payment Vault - Tokenization & Card Vault Gateway Extension.
+WooCommerce PayMaya Payment Gateway Plugin Vault - Tokenization & Card Vault Gateway Extension.
 This extension allows you to accept Credit Cards Payments and Pay via Saved Cards.
 
 = Supported Currency =
