@@ -712,8 +712,6 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
                         'user-agent'    => 'WooCommerce ' . $woocommerce->version
                     ) );
 
-    //echo "<pre>"; print_r($response); echo "</pre>";
-
      if ( is_wp_error( $response ) ) {
 
         $error_message = $response->get_error_message();
@@ -801,19 +799,11 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
             // Get Customer ID
             $pm_customer_id       = $this->get_paymaya_customer_id();  
 
-            //echo "<pre>"; print_r($customer_card_token); echo "</pre>";
-            //echo "<pre>"; print_r($pm_customer_id); echo "</pre>";
-            //exit;
-
             if ( !is_null( $customer_card_token ) && ! empty( $pm_customer_id )  ) {
               return $this->process_paymaya_payments( $order, $customer_card_token->get_token(), $pm_customer_id );  
             }  
 
          } else {
-
-            //echo "<pre>"; print_r($order); echo "</pre>";
-            //echo "<pre>"; print_r($card_token); echo "</pre>";
-            //exit;
 
             return $this->process_paymaya_payments( $order, $card_token );  
          }  
