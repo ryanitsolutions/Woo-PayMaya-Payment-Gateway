@@ -54,4 +54,8 @@ For video and step by step plugin installation tutorial, visit the [plugin web s
 * FIXED: create live keys token 
 * UPDATE: readme.txt
 
+= 1.5.1 =
+* UPDATE: readme.txt
+
+
 
