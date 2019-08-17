@@ -3,7 +3,7 @@ Contributors: ryanitsolutions
 Tags: woocommerce, credit card, payment gateway, payment tokenization, paymaya
 Requires at least: 5.0
 Tested up to: 5.2.2
-Stable tag: 1.5.1
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ This extension allows you to accept Credit Cards Payments and Pay via Saved Card
 * Refund
 
 = Demo Payment Checkout =
-* [Test plugin demo checkou](https://paymaya.kodecanyon.com/)
+* [Test plugin demo checkout](https://paymaya.kodecanyon.com/)
 
 = Online Docs =
 * [How to Setup WooCommerce PayMaya Payment Gateway](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway-plugin/)
@@ -80,6 +80,12 @@ Once you have fully tested this PayMaya woocommerce plugin, you can [contact Pay
 = 1.4.1 =
 * FIXED: JS Token Bugs
 * FIXED: create live keys token 
+* UPDATE: readme.txt
+
+= 1.5.1 =
+* UPDATE: readme.txt
+
+= 1.6.1 =
 * UPDATE: readme.txt
 
 == Upgrade Notice ==

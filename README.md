@@ -57,5 +57,7 @@ For video and step by step plugin installation tutorial, visit the [plugin web s
 = 1.5.1 =
 * UPDATE: readme.txt
 
+= 1.6.1 =
+* UPDATE: readme.txt
 
 
