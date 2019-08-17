@@ -694,7 +694,7 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
       } else {
 
           $endpoint_url     = "https://pg.paymaya.com";
-          $public_key       = ! empty($settings_api[ 'test_public_key' ]) ? $settings_api[ 'test_public_key' ] : '' ;
+          $public_key       = ! empty($settings_api[ 'live_public_key' ]) ? $settings_api[ 'live_public_key' ] : '' ;
           $sslverify        = true;
 
       }
@@ -785,7 +785,7 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
       $token    = WC_Payment_Tokens::get( $token_id );
       
       if ( $token->get_user_id() !== get_current_user_id() ) {
-        wc_add_notice( __( 'Please make sure your card details have been entered correctly and that your browser supports JavaScript.', 'woocommerce' ), 'error' );
+        wc_add_notice( __( 'Please make sure your card details have been entered correctly and that your browser supports JavaScript 1.', 'woocommerce' ), 'error' );
         return;
       }
 
@@ -801,11 +801,20 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
             // Get Customer ID
             $pm_customer_id       = $this->get_paymaya_customer_id();  
 
+            //echo "<pre>"; print_r($customer_card_token); echo "</pre>";
+            //echo "<pre>"; print_r($pm_customer_id); echo "</pre>";
+            //exit;
+
             if ( !is_null( $customer_card_token ) && ! empty( $pm_customer_id )  ) {
               return $this->process_paymaya_payments( $order, $customer_card_token->get_token(), $pm_customer_id );  
             }  
 
          } else {
+
+            //echo "<pre>"; print_r($order); echo "</pre>";
+            //echo "<pre>"; print_r($card_token); echo "</pre>";
+            //exit;
+
             return $this->process_paymaya_payments( $order, $card_token );  
          }  
       
@@ -833,7 +842,7 @@ class WC_PayMaya_Gateway extends WC_Payment_Gateway_CC {
     global $woocommerce;
 
     if ( empty( $card_token ) ) {
-      $err_msg = __( 'Please make sure your card details have been entered correctly and that your browser supports JavaScript.', 'woocommerce' );
+      $err_msg = __( 'Please make sure your card details have been entered correctly and that your browser supports JavaScript 2.', 'woocommerce' );
 
       $order->add_order_note(
           sprintf(

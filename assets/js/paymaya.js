@@ -3,20 +3,8 @@
   function payMayaPaymentsEventHandler(){
 
     var $paymaya_form = $( 'form.checkout, form#order_review, form#add_payment_method' );
-    
-    if ( ( $( '#payment_method_rits_paymaya' ).is( ':checked' ) && 'new' === $( 'input[name="wc-rits_paymaya-payment-token"]:checked' ).val() ) || ( '1' === $( '#woocommerce_add_payment_method' ).val() ) ) {
 
-      if ( 0 === $( 'input.rits_paymaya-token' ).length ) {
-
-         $paymaya_form.block({
-           message: null,
-           overlayCSS: {
-             background: '#fff',
-             opacity: 0.6
-           }
-         });
-
-       var cardnumber     = $( '#rits_paymaya-card-number' ).val(),
+     var cardnumber     = $( '#rits_paymaya-card-number' ).val(),
            expiry         = $.payment.cardExpiryVal( $( '#rits_paymaya-card-expiry' ).val() ),
            addressZip     = $paymaya_form.find( '#billing_postcode' ).val() || '';
 
@@ -72,6 +60,18 @@
                               'enviroment' : PayMaya_params.pm_env
                              }
 
+    $pay_tokens = $(".payment_method_rits_paymaya").find("ul").data( "count" );                      
+    
+    if (  $( '#payment_method_rits_paymaya' ).is( ':checked' )  && $pay_tokens <= 0 ) {  
+      if ( $( 'input.rits_paymaya-token' ).length == 0 ) {
+
+         $paymaya_form.block({
+           message: null,
+           overlayCSS: {
+             background: '#fff',
+             opacity: 0.6
+           }
+         });
        
 
         var $req = {
@@ -92,9 +92,6 @@
 
                 payMayaHandleSuccess(response.data.token);
 
-                  
-                  
-
              } else {
                 payMayaHandleError(response.response_message, response.data.parameters);
              }
@@ -104,8 +101,8 @@
         } else {
           return false;
         }
+
       } else {
-         
          $paymaya_form.submit();
       } 
 
@@ -161,7 +158,7 @@ jQuery( document ).ready( function( $ ) {
     $( "body" ).on( 'click', '#place_order', function( e ){
       
         if (  $( '#payment_method_rits_paymaya' ).is( ':checked' ) ) {
-          
+
           payMayaPaymentsEventHandler();
           return false;    
         }
