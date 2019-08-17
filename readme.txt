@@ -1,9 +1,9 @@
 === Woo PayMaya Payment Gateway ===
 Contributors: ryanitsolutions
 Tags: woocommerce, credit card, payment gateway, payment tokenization, paymaya
-Requires at least: 4.4
-Tested up to: 5.0.3
-Stable tag: 1.3
+Requires at least: 5.0
+Tested up to: 5.2.2
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,10 +14,16 @@ This extension allows you to accept payments in WooCommerce via PayMaya.
 WooCommerce PayMaya Payment Vault - Tokenization & Card Vault Gateway Extension.
 This extension allows you to accept Credit Cards Payments and Pay via Saved Cards.
 
-[youtube https://www.youtube.com/watch?v=5jOuP-l_Evw]
-
 = Supported Currency =
 Currently, supported currency is Philippine Peso (PHP).
+
+= Online Docs =
+* [How to Setup WooCommerce PayMaya Payment Gateway](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway-plugin/)
+* [Watch demo how to set up WooCommerce PayMaya Payment Gateway Plugin](https://www.ryanplugins.com/woocommerce-paymaya-gateway-plugin-video-tutorial/)
+* [Watch Demo PayMaya WooCommerce Demo Checkout](https://www.ryanplugins.com/woocommerce-paymaya-checkout-video-tutorial/)
+
+= GitHub =
+* [WooCommerce PayMaya Payment Gateway Source Code](https://github.com/ryanplugins/woo-paymaya-payment-gateway)
 
 = Testing =
 Test this PayMaya woocommerce plugin by creating transactions using test cards and API keys available [here](https://developers.paymaya.com/blog/entry/payment-vault-test-merchants-and-cards). You can also [contact PayMaya](http://support.paymaya.com/support/home) and request for your own set of API keys.
@@ -28,21 +34,14 @@ Once you have fully tested this PayMaya woocommerce plugin, you can [contact Pay
 
 = Minimum Requirements =
 
-*   WooCommerce 2.6+
-*   WooCommerce 3.5+
-*   WordPress 4.4+
-*   WordPress 5.0+
+*   WooCommerce 3.7+
+*   WordPress 5.2+
 *   PHP 5+
 *   PHP 7+
 
 == Installation ==
 
-1. Upload the entire `wc-paymaya` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-
-You will find 'PayMaya' menu in your WordPress admin panel > Woocommerce Menu > Settings > Checkout .
-
-For video and step by step plugin installation tutorial, visit the [plugin web site](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway).
+[How to Setup WooCommerce PayMaya Payment Gateway](https://www.ryanplugins.com/how-to-setup-woocommerce-paymaya-payment-gateway-plugin/)
 
 
 == Screenshots ==
@@ -65,6 +64,12 @@ For video and step by step plugin installation tutorial, visit the [plugin web s
 * UPDATE: add new status FOR_AUTHENTICATION checkout process
 * UPDATE: add metadata description
 
+= 1.3 =
+* UPDATE: readme.txt
+
+= 1.4 =
+* UPDATE: readme.txt
+
 == Upgrade Notice ==
 
 = 1.0  =
@@ -73,3 +78,10 @@ For video and step by step plugin installation tutorial, visit the [plugin web s
 = 1.2 =
 * UPDATE: add new status FOR_AUTHENTICATION checkout process
 * UPDATE: add metadata description
+
+= 1.3 =
+* UPDATE: readme.txt
+
+= 1.4 =
+* UPDATE: readme.txt
+
